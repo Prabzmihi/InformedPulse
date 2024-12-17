@@ -1,51 +1,27 @@
-import { Box, LinearProgress } from '@mui/material';
+import { Box, LinearProgress, Typography } from '@mui/material';
 import React from 'react'
 
 const MultiColorProgressBar = ({ value }) => {
 
-    const greenWidth = Math.min(value, 20); // Green 0-20
-    const yellowWidth = Math.min(Math.max(value - 20, 0), 40); // Yellow 21-60
-    const redWidth = Math.min(Math.max(value - 60, 0), 40); // Red 61-100
-
-
+  const barColor = value <= 20 ? 'low' : 20 < value && value <= 60 ? 'moderate' : 'high';
 
   return (
-    <Box position="relative" width="100%" height={10}>
-        {/* Green Progress */}
-      <LinearProgress
-        variant="determinate"
-        value={100}
-        sx={{
-          position: 'absolute',
-          width: `${greenWidth}%`,
-          backgroundColor: 'transparent',
-          '& .MuiLinearProgress-bar': { backgroundColor: 'green' },
-        }}
-      />
-      {/* Yellow Progress */}
-      <LinearProgress
-        variant="determinate"
-        value={100}
-        sx={{
-          position: 'absolute',
-          width: `${yellowWidth}%`,
-          left: `${greenWidth}%`,
-          backgroundColor: 'transparent',
-          '& .MuiLinearProgress-bar': { backgroundColor: 'yellow' },
-        }}
-      />
-      {/* Red Progress */}
-      <LinearProgress
-        variant="determinate"
-        value={100}
-        sx={{
-          position: 'absolute',
-          width: `${redWidth}%`,
-          left: `${greenWidth + yellowWidth}%`,
-          backgroundColor: 'transparent',
-          '& .MuiLinearProgress-bar': { backgroundColor: 'red' },
-        }}
-      />
+    <Box sx={{ display: 'flex', alignItems: 'center', width: '100%', justifyContent:'center' }}>
+      <Box sx={{ width: '50%', mr: 1 }}>
+        <LinearProgress variant="determinate" value={value} color={barColor} sx={{
+            height: 7,
+            borderRadius: 5,
+            '& .MuiLinearProgress-bar': {
+              backgroundColor: barColor,
+            },
+            backgroundColor: '#F3F3F3', // Default track color
+          }} />
+      </Box>
+      <Box sx={{ minWidth: 35 }}>
+        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          {`${Math.round(value)}%`}
+        </Typography>
+      </Box>
     </Box>
   )
 }

@@ -6,10 +6,11 @@
     padding: 5px;
     position: fixed;
     bottom: 0;
-
+    height: 26px !important;
+    align-items: center;
 }
 .bottomText{
-    font-size: 8px;
+    font-size: 10px;
     background-color: #102030;
     color: #F7F4F3;
 }

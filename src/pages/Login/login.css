@@ -4,19 +4,34 @@
     height: 100vh;
     position: fixed;
 }
+.mainContainer::before{
+    content: "";
+    background-image: url('../../assets/newslogos/back2.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5; /* Adjust the opacity here */
+    z-index: -1; /* Sends the pseudo-element behind child content */
+}
 .loginMainContainer{
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
+    
 }
 .loginContainer{
     padding: 30px 30px;
     border: 1px solid #ccc;
+    background-color: #f7f4f3;
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     width: 250px;
-    
+    z-index: 1; 
 }
 .loginCredentialContainer{
     margin-top: 10px;

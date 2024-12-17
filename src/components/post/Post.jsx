@@ -103,7 +103,7 @@ const Post = (props) => {
             <img src={imageURL} alt="" className='postImage' />
         </div>
         <div onMouseEnter={handlePopoverOpen} onMouseLeave={handlePopoverClose}>
-          <MultiColorProgressBar value={bias.bias_score} />
+          {bias && <MultiColorProgressBar value={bias?.bias_score} />}
         </div>
         <div className="postBottom">
             <div className="postBottomLeft">
@@ -161,15 +161,18 @@ const Post = (props) => {
         }}
       >
         {/* Detailed information content */}
-        <Card sx={{ maxWidth: 300 }}>
+        <Card sx={{ maxWidth: 900 }}>
           <CardContent>
             <Typography variant="h6" gutterBottom>
               Bias Information
             </Typography>
             <Typography variant="body2" color="text.secondary" align='justify'>
-              Score : {bias.bias_score}% <br />
-              Level : {bias.bias_level} <br />
-              Explenation : {bias.explanation_of_score}
+              <b>Score : </b> {bias?.bias_score}% <br /><br />
+              <b>Level :</b> {bias?.bias_level} <br /><br />
+              <b>Explenation :</b> {bias?.explanation_of_score} <br /><br />
+              <b>Framing :</b> {bias?.framing} <br /><br />
+              <b>Tone :</b> {bias?.tone} <br /><br />
+              <b>Selective Details :</b> {bias?.selective_details} <br />
             </Typography>
           </CardContent>
         </Card>

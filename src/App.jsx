@@ -27,6 +27,15 @@ const theme = createTheme({
     secondary: {
       main: '#CE4420',
     },
+    low:{
+      main: '#00FF00',
+    },
+    moderate:{
+      main: '#FFFF00'
+    },
+    high:{
+      main: '#FF0000'
+    }
   },
 });
 
@@ -55,7 +64,6 @@ function App() {
           <PrivateRoute>
             <Register />
           </PrivateRoute>
-          
           } />
       </Routes>
     </ThemeProvider>

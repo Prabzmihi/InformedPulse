@@ -58,10 +58,10 @@ const TopBar = () => {
                 <img src={Logo} alt='' className='logo' />
         </div>
         <div className="topBarCenter">
-            <div className="searchBar">
+            {/* <div className="searchBar">
                 <Search className='searchIcon' />    
                 <input type="text" placeholder='Search for news' className="searchInput" />
-            </div>
+            </div> */}
         </div>
         <div className="topBarRight">
             {/* <div className="topBarIcons">

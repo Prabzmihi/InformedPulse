@@ -16,7 +16,7 @@ const LeftBar = () => {
     <div className='leftBar'>
       <div className='latestNews'> 
         {latestNews && latestNews.map(news => {
-          return (<a target='_blank' href={news.url}>
+          return (<a key={news._id} target='_blank' href={news.url}>
               <div className='singleNews'>
                 <div className='newsThumbnail'>
                   <img src={news.main_image} className='latestNewsThumbnail' />
