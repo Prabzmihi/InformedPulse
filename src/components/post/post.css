@@ -1,0 +1,139 @@
+.post{
+    width: 100%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+    box-shadow:  0px 0px 16px -8px rgba(0,0,0,0.68);
+    margin: 30px 0;
+}
+
+.postWrapper{
+    padding: 10px;
+}
+
+.postTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.postTopLeft{
+    display: flex;
+    align-items: center;
+}
+
+.postProfileImage{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.postUsername{
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0 10px;
+}
+
+.postedDate{
+    font-size: 12px;
+}
+.postText{
+    display: inline-block;  /* Makes span behave like block */
+    line-height: 1.8;
+}
+
+.happyFace{
+    color: green;
+    margin: 5px;
+}
+
+.badFace{
+    color: red;
+    margin: 5px;
+}
+.normal{
+    color: darkorange;
+    margin: 5px;
+}
+.interestingBtn{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-color: #102030;
+    color: #102030;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.interestingBtnClicked{
+    display: flex;
+    align-items: center;
+    background-color: #102030;
+    border-color: #102030;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.interestingBtn:ho
+
+.starIcon{
+    color: #1877f2;
+}
+
+.postCenter{
+    margin: 20px 0;
+}
+.similarNews{
+    margin: 10px 0px;
+    display: inline-block;
+    text-align: justify;
+
+}
+.justifyingArea{
+    text-align: justify;
+}
+.postTitle b{
+    font-size: 18px !important;
+}
+
+.postImage{
+    margin-top: 20px;
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.postBottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+}
+.similarNewsContainer {
+    display: flex; /* Align child items horizontally */
+    width: 100%; /* Parent container width */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical overflow */
+    white-space: nowrap; /* Prevent wrapping of child divs */
+    border: 1px solid #ccc;
+    gap: 10px; /* Add space between items */
+    padding: 10px 0; /* Add top and bottom padding */
+}
+
+.content {
+    flex-shrink: 0; /* Prevent shrinking of items */
+    width: 150px; /* Fixed width for each item */
+    min-width: 150px; /* Ensure items don’t shrink smaller */
+    height: auto; /* Allow height to adjust based on content */
+    border: 1px solid #ccc;
+    padding: 10px; /* Add padding for text inside */
+    white-space: normal; /* Enable text wrapping */
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Ensure compatibility with modern browsers */
+    background-color: #f9f9f9; /* Optional: Add background color for clarity */
+}
+.similarNewsThumbnail{
+    width: 150px;
+}

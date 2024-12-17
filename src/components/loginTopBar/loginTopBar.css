@@ -1,0 +1,11 @@
+.topBarContainer{
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+.companyLogo{
+    width: 70px;
+    margin-left: 10px;
+}

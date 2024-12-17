@@ -1,0 +1,15 @@
+.bottomBar{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #102030;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+
+}
+.bottomText{
+    font-size: 8px;
+    background-color: #102030;
+    color: #F7F4F3;
+}
