@@ -27,7 +27,7 @@ const Category = ({
   return (
     <div className='categoryContainer'>
       {categories.map(category => (
-        <div className="categoryItem" onClick={()=>handleOnclick({category})}>
+        <div className={ clickedCat == category ? 'categoryItemClicked' : 'categoryItem'} onClick={()=>handleOnclick({category})}>
           {category}
         </div>
       ))}

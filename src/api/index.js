@@ -1,5 +1,4 @@
 import createApiClient from './apiService';
-import apiClient from './apiService';
 import endpoints from './endpoints';
 
 const mainApiClient = createApiClient(import.meta.env.VITE_API_BASE_URL);
@@ -73,3 +72,17 @@ export const fetchNews = async () => {
       console.log("Error on user registration :", error)
     }
   }
+
+  export const filterFetchNews = async (filterBy) => {
+    try {
+      const response = await authApiClient.get(endpoints.FILTER_NEWS, {
+        params: {
+          limit: 40,
+          category: filterBy,
+        }
+      });
+      return response.data.news;
+    } catch (error) {
+      throw error;
+    }
+  };

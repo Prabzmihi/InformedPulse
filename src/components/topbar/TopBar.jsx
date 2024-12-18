@@ -91,7 +91,7 @@ const TopBar = () => {
                 },
               }}
         >
-            <MenuItem onClick={handleProfileRedirect}> <Person2Icon /> Profile </MenuItem>
+            {/* <MenuItem onClick={handleProfileRedirect}> <Person2Icon /> Profile </MenuItem> */}
             <MenuItem onClick={handleLogout}> <LogoutIcon /> Logout</MenuItem>
       </Menu>
     </div>

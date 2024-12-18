@@ -12,3 +12,12 @@
     cursor: pointer;
     font-weight: 500;
 }
+.categoryItemClicked{
+    background-color: #102030;
+    border-color: #102030;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+}
