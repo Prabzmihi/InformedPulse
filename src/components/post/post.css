@@ -112,28 +112,34 @@ a{
     text-decoration: none;
 }
 .similarNewsContainer {
-    display: flex; /* Align child items horizontally */
-    width: 100%; /* Parent container width */
+    display: flex; /* Arrange child items horizontally */
+    flex-direction: row; /* Default: Horizontal alignment */
+    width: 700px; /* Full width */
     overflow-x: auto; /* Enable horizontal scrolling */
     overflow-y: hidden; /* Prevent vertical overflow */
-    white-space: nowrap; /* Prevent wrapping of child divs */
-    border: 1px solid #ccc;
-    gap: 10px; /* Add space between items */
-    padding: 10px 0; /* Add top and bottom padding */
+    gap: 10px; /* Add spacing between items */
+    border: 1px solid #ccc; /* Optional: Add border for clarity */
+    padding: 10px; /* Padding for the container */
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+    white-space: normal; /* Prevent wrapping of items */
+    text-align: justify;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-decoration: none;
 }
 
 .content {
-    flex-shrink: 0; /* Prevent shrinking of items */
+    flex-shrink: 0; /* Prevent items from shrinking */
     width: 150px; /* Fixed width for each item */
-    min-width: 150px; /* Ensure items don’t shrink smaller */
-    height: auto; /* Allow height to adjust based on content */
-    border: 1px solid #ccc;
-    padding: 10px; /* Add padding for text inside */
-    white-space: normal; /* Enable text wrapping */
-    word-wrap: break-word; /* Break long words */
-    overflow-wrap: break-word; /* Ensure compatibility with modern browsers */
-    background-color: #f9f9f9; /* Optional: Add background color for clarity */
+    min-width: 150px; /* Ensure consistent width */
+    height: auto; /* Let height adjust dynamically */
+    border: 1px solid #ccc; /* Optional: Add border */
+    padding: 10px; /* Internal padding for the content */
+    background-color: #f9f9f9; /* Optional: Background color for clarity */
+    overflow-wrap: break-word; /* Prevent overflow of long words */
 }
+
 .similarNewsThumbnail{
     width: 150px;
+    height: auto;
 }

@@ -1,27 +1,36 @@
 import React from 'react'
 import './category.css'
 
-const Category = () => {
+const Category = ({
+  clickedCat,onChangeCat
+}) => {
+  const categories = [
+    'Business', 
+    'Crime', 
+    'Culture', 
+    'Education', 
+    'Entertainment', 
+    'Environment', 
+    'Health', 
+    'Lifestyle', 
+    'Politics', 
+    'Science', 
+    'Sports', 
+    'Technology', 
+    'Travel'
+  ];
+
+  const handleOnclick = (value) => {
+    onChangeCat(value.category)
+  }
+
   return (
     <div className='categoryContainer'>
-      <div className="categoryItem">
-        Social
-      </div>
-      <div className="categoryItem">
-        Political
-      </div>
-      <div className="categoryItem">
-        Sports
-      </div>
-      <div className="categoryItem">
-        Foreign
-      </div>
-      <div className="categoryItem">
-        Business
-      </div>
-      <div className="categoryItem">
-        Weather
-      </div>
+      {categories.map(category => (
+        <div className="categoryItem" onClick={()=>handleOnclick({category})}>
+          {category}
+        </div>
+      ))}
     </div>
   )
 }

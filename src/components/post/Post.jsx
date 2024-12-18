@@ -129,7 +129,7 @@ const Post = (props) => {
               {top5Similar && top5Similar.map(similarnews => 
                 (
                   <div key={similarnews._id} className='content'>
-                    <img src={similarnews.main_image} className='similarNewsThumbnail' />
+                    <img src={similarnews.main_image} className='similarNewsThumbnail' /> <br />
                     <a target='_blank' className='similarNews' href={similarnews.url}>{similarnews.title}</a> <br />
                   </div>
                 )

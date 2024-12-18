@@ -24,6 +24,15 @@ import axios from 'axios';
       client.interceptors.response.use(
         (response) => response,
         (error) => {
+
+          // Check if the error response is a 401 Unauthorized
+          if (error.response && error.response.status === 401) {
+            // Clear tokens from localStorage
+            localStorage.removeItem('access_token');
+            
+            // Redirect to login page or handle logout logic
+            window.location.href = '/login'; // Adjust the path based on your routing
+          }
           
           // Handle errors globally
           return Promise.reject(error);

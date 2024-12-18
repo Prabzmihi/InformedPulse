@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './feed.css'
 import Post from '../post/Post'
 import Category from '../category/category'
@@ -8,6 +8,11 @@ import {fetchNews} from '../../api'
 const Feed = () => {
 
   const { data: news, error, loading, fetchData } = useApi(fetchNews);
+  const [clickedCategory, setClickedCategory] = useState("");
+
+  const onChangeCategory = (value) => {
+    setClickedCategory(value);
+  }
 
   useEffect(() => {
     fetchData();
@@ -19,10 +24,10 @@ const Feed = () => {
   return (
     <div className='feed'>
       <div className="feedWrapper">
-        <Category />
+        <Category clickedCat={clickedCategory} onChangeCat={onChangeCategory} />
 
-        {news && news.map(news => (
-          <Post 
+        {clickedCategory == "" && news && news.map(news => (
+          <Post
             key={news._id} 
             id={news._id} 
             imageURL={news.main_image} 
