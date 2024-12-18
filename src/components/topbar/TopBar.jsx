@@ -2,7 +2,7 @@ import { Person, Search } from '@mui/icons-material'
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import PersonProfileImage from '../../assets/person/person1.jpg'
 import React, { useEffect, useState } from 'react'
-import './topbar.css'
+import './topBar.css'
 import Logo from '../../assets/logo/logo.png'
 import { Menu, MenuItem } from '@mui/material';
 import Person2Icon from '@mui/icons-material/Person2';
