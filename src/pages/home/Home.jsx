@@ -14,7 +14,6 @@ const Home = () => {
         <Feed />
         <RightBar />
       </div>
-      <></>
     </div>
   )
 }
