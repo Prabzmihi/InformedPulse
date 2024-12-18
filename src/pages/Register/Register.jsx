@@ -6,7 +6,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { Dayjs } from 'dayjs';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import LoginBottomBar from '../../components/loginBottomBar/LoginBottomBar';
-import LoginTopBar from '../../components/loginTopBar/loginTopBar';
+import LoginTopBar from '../../components/loginTopBar/LoginTopBar';
 import Alink from '../../components/alink/ALink'
 import Agreement from '../../components/agreement/Agreement';
 import dayjs from 'dayjs';

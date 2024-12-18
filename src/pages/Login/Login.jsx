@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './login.css';
 import logo from '../../assets/logo/logo.png'
 import { Button, IconButton, InputAdornment, Snackbar, TextField, Typography } from '@mui/material';
-import LoginTopBar from '../../components/loginTopBar/loginTopBar';
+import LoginTopBar from '../../components/loginTopBar/LoginTopBar';
 import ALink from '../../components/alink/ALink';
 import LoginBottomBar from '../../components/loginBottomBar/LoginBottomBar';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
