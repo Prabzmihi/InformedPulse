@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './feed.css'
 import Post from '../post/Post'
-import Category from '../category/category'
+import Category from '../category/Category'
 import useApi from '../../hooks/useApi'
 import {fetchNews} from '../../api'
 
