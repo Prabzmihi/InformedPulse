@@ -24,7 +24,8 @@ const Post = (props) => {
     domainLogo,
     top5Similar,
     bias,
-    isInterested
+    isInterested,
+    domain
   } = props;
 
   const postId = {
@@ -86,7 +87,7 @@ const Post = (props) => {
         <div className="postTop">
             <div className="postTopLeft">
                 <img src={domainLogo} alt="" className='postProfileImage' />
-                <span className="postUsername">BBC</span>
+                <span className="postUsername">{domain}</span>
                 <span className="postedDate">{formatDistanceToNow(new Date(publishedDate), { addSuffix: true })}</span>
             </div>
             <div className="postTopRight"></div>

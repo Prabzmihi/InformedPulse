@@ -47,6 +47,7 @@ const Feed = () => {
             top5Similar={news.top_5_similar}
             bias={news.bias}
             isInterested={news.is_interested}
+            domain={news.domain}
           />
         ))}
         {clickedCategory != "" && filterednews && filterednews.map(news => (
