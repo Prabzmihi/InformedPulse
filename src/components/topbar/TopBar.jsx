@@ -16,6 +16,7 @@ const TopBar = () => {
     const [anchorEl, setAnchorEl] = useState(null);
     const navigate = useNavigate();
     const { data: logoutStatus, error, loading, fetchData } = useApi(userLogout);
+    const [searchValue, setSearchValue] = useState("");
 
     useEffect(() => {
         if (logoutStatus?.message === 'Successfully logged out') {
@@ -52,16 +53,35 @@ const TopBar = () => {
         navigate('/updateProfile')
     }
 
+    const handleKeyDown = (event) => {
+        if (event.key === "Enter") {
+          console.log("Enter key pressed!", searchValue);
+
+          alert(`You entered: ${searchValue}`);
+        }
+      };
+
+      const handleSearchChange = (event) => {
+        setSearchValue(event.target.value);
+      };
+
   return (
     <div className='topBarContainer'>
         <div className="topBarLeft">
                 <img src={Logo} alt='' className='logo' />
         </div>
         <div className="topBarCenter">
-            {/* <div className="searchBar">
+            <div className="searchBar">
                 <Search className='searchIcon' />    
-                <input type="text" placeholder='Search for news' className="searchInput" />
-            </div> */}
+                <input 
+                    type="text" 
+                    placeholder='Search for news' 
+                    className="searchInput" 
+                    value={searchValue}
+                    onChange={handleSearchChange}
+                    onKeyDown={handleKeyDown}
+                />
+            </div>
         </div>
         <div className="topBarRight">
             {/* <div className="topBarIcons">

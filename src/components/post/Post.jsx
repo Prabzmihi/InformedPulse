@@ -131,7 +131,14 @@ const Post = (props) => {
                 (
                   <div key={similarnews._id} className='content'>
                     <img src={similarnews.main_image} className='similarNewsThumbnail' /> <br />
-                    <a target='_blank' className='similarNews' href={similarnews.url}>{similarnews.title}</a> <br />
+                    <a 
+                      target='_blank' 
+                      className='similarNews' 
+                      href={similarnews.url}
+                      onClick={() => addInteractn({news_id:similarnews._id})}
+                    >
+                      {similarnews.title}
+                    </a> <br />
                   </div>
                 )
               )}        
