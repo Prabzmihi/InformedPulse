@@ -1,5 +1,5 @@
 const endpoints = {
-    FETCH_NEWS: '/user/recommendations/?limit=40',
+    FETCH_NEWS: '/user/recommendations?limit=40',
     LOGIN_USER: '/auth/login',
     LOGOUT: '/auth/logout',
     FETCH_POSTS: '/posts',
