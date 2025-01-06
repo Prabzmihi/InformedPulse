@@ -31,7 +31,7 @@ import axios from 'axios';
             localStorage.removeItem('access_token');
             
             // Redirect to login page or handle logout logic
-            window.location.href = '/login'; // Adjust the path based on your routing
+            window.location.href = '/'; // Adjust the path based on your routing
           }
           
           // Handle errors globally
